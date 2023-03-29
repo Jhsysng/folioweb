@@ -7,7 +7,7 @@ class Portfolio(models.Model):
 
     #goals
     #motivation
-    #content
+    content=models.TextField()
     #images
 
     #tag
@@ -17,6 +17,9 @@ class Portfolio(models.Model):
 
     def __str__(self):
         return f'{self.title}'
+
+    def get_url(self):
+        return f'{}'
 
 
 # Create your models here.
