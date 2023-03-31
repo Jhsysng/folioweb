@@ -14,4 +14,4 @@ class Portfolios(ListView):
 
 class PortfolioDetail(DetailView):
     model=Portfolio
-    template_name='folio/portfolio.html'
+    template_name = 'folio/portfolio.html'

@@ -1,14 +1,18 @@
 from django.db import models
 
 class Portfolio(models.Model):
+    id = models.AutoField(primary_key=True)
     title=models.CharField(max_length=50)
     #tech_stack_tag
     #urls
 
     #goals
     #motivation
+    #content
     content=models.TextField(null=True)
-    #images
+    #image
+    image=models.ImageField(upload_to='folio/images/portfolio', blank=True)
+
 
     #tag
     #version
