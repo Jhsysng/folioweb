@@ -10,7 +10,7 @@ class Portfolio(models.Model):
     #motivation
     #content
     content=models.TextField(null=True)
-    #image
+    #image(sample_image)
     image=models.ImageField(upload_to='folio/images/portfolio', blank=True)
 
 
