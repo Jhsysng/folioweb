@@ -10,7 +10,7 @@
         <!-- portfolio data-->
         <div class="row">
             <div class="col-md-6">
-                data
+                <p class="card-text">Code URL : <a href="{{ portfolio.code_url }}">{{ portfolio.code_url }}</a></p>
             </div>
             <div class="col-md-6">
                 <img class="card-img-top" src="{{ portfolio.image.url }}" alt="sample img">
@@ -18,6 +18,8 @@
         </div>
         <hr>
         <!-- content -->
+        <h3 class="card-text">동기</h3>
+        <h3 class="card-text">주요 기능 및 설명</h3>
         <p>{{ portfolio.content }}</p>
         <hr>
         <!-- Updated date -->
