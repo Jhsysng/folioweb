@@ -1,19 +1,22 @@
 from django.db import models
 from django.contrib.auth.models import User
 class Portfolio(models.Model):
+    #core
     id = models.AutoField(primary_key=True)
-    user=models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
-    title=models.CharField(max_length=50)
-    #tech_stack_tag
-    #urls
-    code_url=models.CharField(max_length=70, null=True)
+    user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
+    title = models.CharField(max_length=50)
+    #tag
+    tech_tag = models.ManyToManyField('tag.TechTag', null=True)
+    lang_tag = models.ManyToManyField('tag.LangTag', null=True)
+    #data
+    code_url = models.CharField(max_length=70, null=True)
     #goals
     #duration
 
-    #motivation
-    motive=models.TextField(null=True)
-    content=models.TextField(null=True)
-    image=models.ImageField(upload_to='folio/images/portfolio', blank=True)
+    #content
+    motive = models.TextField(null=True)
+    content = models.TextField(null=True)
+    image = models.ImageField(upload_to='folio/images/portfolio', blank=True)
 
     #tag
     #version
@@ -26,3 +29,4 @@ class Portfolio(models.Model):
 
     def get_url(self):
         return f'/folio/{self.pk}'
+
