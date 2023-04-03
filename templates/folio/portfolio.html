@@ -5,12 +5,13 @@
         <!-- title -->
         <h1 class="mt-5">{{ portfolio.title }}</h1>
         <!-- post Date -->
-        <p class="lead">{{ portfolio.created_at }}</p>
+        <p class="text-muted">{{ portfolio.created_at|date:'Y-m-d H:i' }}</p>
         <hr>
         <!-- portfolio data-->
         <div class="row">
             <div class="col-md-6">
-                <p class="card-text">Code URL : <a href="{{ portfolio.code_url }}">{{ portfolio.code_url }}</a></p>
+                <p class="card-text">Link : <a href="{{ portfolio.code_url }}">{{ portfolio.code_url }}</a></p>
+                <p>Developer : {{ portfolio.user }}</p>
             </div>
             <div class="col-md-6">
                 <img class="card-img-top" src="{{ portfolio.image.url }}" alt="sample img">
@@ -18,11 +19,12 @@
         </div>
         <hr>
         <!-- content -->
-        <h3 class="card-text">동기</h3>
-        <h3 class="card-text">주요 기능 및 설명</h3>
+        <h3 class="mt-2">동기</h3>
+        <p>{{ portfolio.motive }}</p>
+        <h3 class="mt-3">주요 기능 및 설명</h3>
         <p>{{ portfolio.content }}</p>
         <hr>
         <!-- Updated date -->
-        <p>{{ portfolio.updated_at }}</p>
-    </div>
+        <p>last edit date : {{ portfolio.updated_at|date:'Y-m-d H:i' }}</p>
+    </div>-
 {% endblock %}
