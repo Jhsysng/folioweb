@@ -1,3 +1,5 @@
 .idea/
+.idea/workspace.xml
 migrations/
 media/
+db.sqlite3

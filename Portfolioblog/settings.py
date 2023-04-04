@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'folio',
-    'pages',
-    'tag'
+    'pages'
 ]
 
 MIDDLEWARE = [
