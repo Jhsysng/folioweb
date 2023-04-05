@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62dfcb05-8f7a-4469-b519-c7b5a8474aa1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolioblog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolioblog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/folio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/folio/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/folio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/folio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/folio/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/folio/portfolio.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +56,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Portfolioblog.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -100,7 +92,8 @@
       <workItem from="1680235840974" duration="13679000" />
       <workItem from="1680420287129" duration="6146000" />
       <workItem from="1680494873078" duration="16129000" />
-      <workItem from="1680582656556" duration="3845000" />
+      <workItem from="1680582656556" duration="4509000" />
+      <workItem from="1680671864685" duration="6289000" />
     </task>
     <servers />
   </component>

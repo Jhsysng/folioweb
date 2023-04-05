@@ -27,21 +27,19 @@ class Portfolio(models.Model):
     id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
     title = models.CharField(max_length=50)
-    #tag
-    tech_tag = models.ManyToManyField(TechTag, blank=True)
-    lang_tag = models.ManyToManyField(LangTag, blank=True)
+
     #=======data========
     code_url = models.CharField(max_length=70, null=True)
-    #duration
+    #duration(core)
     #goals
-
+    tech_tag = models.ManyToManyField(TechTag, blank=True)
+    lang_tag = models.ManyToManyField(LangTag, blank=True)
 
     #======content=======
     motive = models.TextField(null=True)
     content = models.TextField(null=True)
     image = models.ImageField(upload_to='folio/images/portfolio', blank=True)
-
-    #version
+    version = models.CharField(max_length=10, null=True)
 
     created_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
