@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62dfcb05-8f7a-4469-b519-c7b5a8474aa1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/folio/form.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/folio/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolioblog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolioblog/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolioblog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolioblog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folio/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/folio/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/folio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/folio/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folio/static/folio/bootstrap/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/folio/static/folio/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/folio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/folio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/folio/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/folio/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/folio/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/folio/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/folio/portfolio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/folio/portfolios.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/folio/portfolios.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -93,7 +103,11 @@
       <workItem from="1680420287129" duration="6146000" />
       <workItem from="1680494873078" duration="16129000" />
       <workItem from="1680582656556" duration="4509000" />
-      <workItem from="1680671864685" duration="6289000" />
+      <workItem from="1680671864685" duration="13525000" />
+      <workItem from="1680699365921" duration="598000" />
+      <workItem from="1680754649353" duration="2161000" />
+      <workItem from="1680837908094" duration="4028000" />
+      <workItem from="1681094598854" duration="17302000" />
     </task>
     <servers />
   </component>
@@ -110,5 +124,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/folio/views.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

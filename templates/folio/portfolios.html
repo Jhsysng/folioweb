@@ -1,23 +1,21 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="ko">
-<head>
-    <meta charset="utf-8">
-    <title>포트폴리오 글보기</title>
-    <!-- CSS only -->
-    <link rel="stylesheet" href="{% static 'folio/bootstrap/bootstrap.min.css' %}" media="screen">
-</head>
-<body>
+{% extends 'folio/base.html' %}
 <h1>Portfolio List</h1>
-{% for p in portfolio_list %}
-    <div class="card mb-4">
-        <div class="card-body">
-            <a href="{{ p.get_url }}"><h2 class="card-title">{{ p.title }}</h2></a>
-            <p class="card-text">{{ p.content }}</p>
-            <!-- tag -->
-            <!-- develop du -->
+{% block main_area %}
+    {% for p in portfolio_list %}
+        <div class="card mb-4">
+            <div class="card-body">
+                <a href="{{ p.get_url }}" style="text-decoration:none"><h2 class="card-title">[{{ p.pk }}]{{ p.title }}</h2></a>
+                <p class="card-text">{{ p.get_content|truncatewords_html:3|safe}}</p>
+                <!-- tag -->
+                tag :
+                {% for tt in p.tech_tag.all %}
+                    <span class="badge bg-dark">
+                        <img src="{{ tt.image.url }}" alt="{{ tt.name }}" height="13">
+                        {{ tt.name }}
+                    </span>
+                {% endfor %}
+                <!-- develop du -->
+            </div>
         </div>
-    </div>
-{% endfor %}
-</body>
-</html>
+    {% endfor %}
+{% endblock %}

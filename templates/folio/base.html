@@ -3,7 +3,7 @@
 {% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>{{ portfolio.title }}</title>
+    <title>FolioLog</title>
     <link rel="stylesheet" href="{% static 'folio/bootstrap/bootstrap.min.css' %}" media="screen">
 </head>
 <body>
@@ -21,13 +21,13 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./portfolios.html">Portfolios</a>
+                  <a class="nav-link" href="/folio">Portfolios</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">TechStack</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="/folio/search">Search</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -48,15 +48,9 @@
         </div>
     </nav>
     <div class="container">
-        <div class="row">
-            <!-- sidebar -->
-            <div class="col-lg-3" style="background-color:green">
-                작성 준비중
-            </div>
-            <!-- Main Portfolio Content -->
-            {% block main_area %}
-            {% endblock %}
-        </div>
+        <!-- Main Portfolio Content -->
+        {% block main_area %}
+        {% endblock %}
     </div>
     <!--footer-->
     <footer class="py-3 bg-light">

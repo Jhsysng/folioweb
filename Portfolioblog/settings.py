@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'folio',
-    'pages'
+    'pages',
+    'markdownx',
+    'ajax_select',
 ]
 
 MIDDLEWARE = [
@@ -80,6 +82,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'OPTIONS': {
+            'timeout':30000,
+        },
+        'ATOMIC_REQUESTS': True,
     }
 }
 

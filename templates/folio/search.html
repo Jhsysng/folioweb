@@ -1,0 +1,35 @@
+{% extends 'folio/base.html' %}
+{% block main_area %}
+    <script>
+        function search(){
+            let searchq=document.getElementById('search').value.trim()
+            location.href="/folio/search/"+searchq+"/";
+        }
+        document.getElementById('search').addEventListener('keyup',function(event){
+            if(event.key === 'Enter'){
+                search();
+            }
+        });
+    </script>
+
+    <input type="text" id="search" name="searchbar" onChange="search();">
+    <button class="btn" onclick="search();"></button>
+
+    <h2>검색 목록</h2>
+    {% for lang_tag in lang_tags %}
+        {{ lang_tag.name }}
+        <img src="{{ lang_tag.image.url }}" alt="{{ lang_tag.name }}">
+    {% empty %}
+        <p>None</p>
+    {% endfor %}
+    {% for tech_tag in tech_tags %}
+        {{ lang_tag.name }}
+    {% empty %}
+        <p>None</p>
+    {% endfor %}
+    {% for portfolio in portfolios %}
+        {{ portfolio.title }}
+    {% empty %}
+        <p>None</p>
+    {% endfor %}
+{% endblock %}
