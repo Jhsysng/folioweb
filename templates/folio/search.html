@@ -11,25 +11,41 @@
             }
         });
     </script>
-
-    <input type="text" id="search" name="searchbar" onChange="search();">
-    <button class="btn" onclick="search();"></button>
-
-    <h2>검색 목록</h2>
-    {% for lang_tag in lang_tags %}
-        {{ lang_tag.name }}
-        <img src="{{ lang_tag.image.url }}" alt="{{ lang_tag.name }}">
-    {% empty %}
-        <p>None</p>
-    {% endfor %}
-    {% for tech_tag in tech_tags %}
-        {{ lang_tag.name }}
-    {% empty %}
-        <p>None</p>
-    {% endfor %}
-    {% for portfolio in portfolios %}
-        {{ portfolio.title }}
-    {% empty %}
-        <p>None</p>
-    {% endfor %}
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="input-group mb-3 my-5 p-5">
+            <input type="text" id="search" class="form-control" placeholder="Search tag, portfolio" aria-label="검색어"
+                   aria-describedby="button-addon2" name="searchbar" onChange="search();" autofocus>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+        <h2 class="card-title">검색 목록</h2>
+        <h3>Language</h3>
+        {% for lt in lang_tags %}
+            <span class="badge bg-light">
+                <img src="{{ lt.image.url }}" height="13" alt="{{ lt.name }} logo">{{ lt.name }}</span>
+        {% empty %}
+            <p>None</p>
+        {% endfor %}
+        <h3>Tech</h3>
+        {% for tt in tech_tags %}
+            <span class="badge bg-light"><img src="{{ tt.image.url }}" height="13" alt="{{ tt.name }} logo">{{ tt.name }}</span>
+        {% empty %}
+            <p>None</p>
+        {% endfor %}
+        <h3>Portfolio</h3>
+        {% for p in portfolios %}
+            <div class="card mb-4">
+                <div class="card-body">
+                    <a href="{{ p.get_url }}" style="text-decoration:none"><h2 class="card-title">[{{ p.pk }}]{{ p.title }}</h2></a>
+                    <p class="card-text">{{ p.get_content|truncatewords_html:3|safe}}</p>
+                </div>
+            </div>
+        {% empty %}
+            <p>None</p>
+        {% endfor %}
+    </div>
 {% endblock %}

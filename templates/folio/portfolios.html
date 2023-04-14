@@ -2,10 +2,10 @@
 <h1>Portfolio List</h1>
 {% block main_area %}
     {% for p in portfolio_list %}
-        <div class="card mb-4">
+        <div class="card mb-4 my-3">
             <div class="card-body">
-                <a href="{{ p.get_url }}" style="text-decoration:none"><h2 class="card-title">[{{ p.pk }}]{{ p.title }}</h2></a>
-                <p class="card-text">{{ p.get_content|truncatewords_html:3|safe}}</p>
+                <a href="{{ p.get_absoulte_url }}" style="text-decoration:none"><h2 class="card-title">[{{ p.pk }}]{{ p.title }}</h2></a>
+                {{ p.get_content|truncatewords_html:3|safe}}
                 <!-- tag -->
                 tag :
                 {% for tt in p.tech_tag.all %}

@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from markdownx.models import MarkdownxField
 from markdownx.utils import markdown
+from django.db.models import Q
 
 
 class TechTag(models.Model):
@@ -13,6 +14,16 @@ class TechTag(models.Model):
     def __str__(self):
         return self.name
 
+    def name_per(self):
+        return self.portfolio_set.all().count()/self.objects.all().count()*100
+
+    def count_all(self):
+        return self.objects.all().count()
+
+    def count_portfolio(self):
+        return self.portfolio_set.all().count()
+
+
 
 class LangTag(models.Model):
     name = models.CharField(max_length=8, null=False)
@@ -23,22 +34,33 @@ class LangTag(models.Model):
     def __str__(self):
         return self.name
 
+    def name_per(self):
+        return self.portfolio_set.all().count()/self.objects.all().count()*100
+
+    def count_all(self):
+        return self.objects.all().count()
+
+    def count_portfolio(self):
+        return self.portfolio_set.all().count()
+
 
 class Portfolio(models.Model):
-    #======core========
+
+    # ======core========
+
     id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
     title = models.CharField(max_length=50)
 
-    #=======data========
+    # =======data========
     code_url = models.CharField(max_length=70, null=True)
     duration = models.CharField(max_length=20, null=True)
     tech_tag = models.ManyToManyField(TechTag, blank=True)
     lang_tag = models.ManyToManyField(LangTag, blank=True)
-    #env(later)
+    # env(later)
 
-    #======content=======
-    #goals(later)
+    # ======content=======
+    # goals(later)
     motive = models.TextField(null=True)
     content = MarkdownxField()
     image = models.ImageField(upload_to='folio/images/portfolio', blank=True)
@@ -49,9 +71,10 @@ class Portfolio(models.Model):
 
     def get_content(self):
         return markdown(self.content)
+
     def __str__(self):
         return f'({self.pk}){self.title}'
 
-    def get_url(self):
+    def get_absoulte_url(self):
         return f'/folio/{self.pk}'
 

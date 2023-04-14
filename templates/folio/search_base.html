@@ -1,0 +1,25 @@
+{% extends 'folio/base.html' %}
+{% block main_area %}
+    <script>
+        function search(){
+            let searchq=document.getElementById('search').value.trim()
+            location.href="/folio/search/"+searchq+"/";
+        }
+        document.getElementById('search').addEventListener('keyup',function(event){
+            if(event.key === 'Enter'){
+                search();
+            }
+        });
+    </script>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="input-group mb-3 my-5 p-5">
+            <input type="text" id="search" class="form-control" placeholder="Search..." aria-label="검색어"
+                   aria-describedby="button-addon2" name="searchbar" onChange="search();" autofocus>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

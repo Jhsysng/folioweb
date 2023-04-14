@@ -1,0 +1,23 @@
+{% extends 'folio/base.html' %}
+준비중..
+
+{% block main_area %}
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card border-secondary mb-3" style="max-width: 20rem;">
+                <div class="card-header">Language</div>
+                <div class="card-body">
+                    <h4 class="card-title">language tag list</h4>
+                    {% for lt in lang_tags %}
+                        <span class="badge bg-dark">
+                        <img src="{{ lt.image.url }}" alt="{{ lt.name }}" height="13">
+                            {{ lt.name }}
+                        </span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4"></div>
+    </div>
+{% endblock %}
