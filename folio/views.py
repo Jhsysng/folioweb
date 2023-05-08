@@ -18,6 +18,26 @@ class SearchBaseView(TemplateView):
     template_name = 'folio/search_base.html'
 
 
+class HomeView(TemplateView):
+    template_name = 'folio/home.html'
+
+    def get_queryset(self):
+        lang_tags = LangTag.objects.all
+        tech_tags = TechTag.objects.all
+
+        return {
+            'lang_tags': lang_tags,
+            'tech_tags': tech_tags,
+        }
+
+    def get_context_dat(self,**kwargs):
+        context = super().get_context_data(**kwargs)
+        context['lang_tags'] = self.get_queryset()['lang_tags']
+        context['tech_tags'] = self.get_queryset()['tech_tags']
+
+        return context
+
+
 class TechList(TemplateView):
     model = None
     template_name = 'folio/tech_info.html'
@@ -35,6 +55,8 @@ class TechList(TemplateView):
         context = super().get_context_data(**kwargs)
         context['lang_tags'] = self.get_queryset()['lang_tags']
         context['tech_tags'] = self.get_queryset()['tech_tags']
+        #context['lang_ratio'] = self.get_queryset()['']
+        #context['tech_ratio'] = self.get_queryset()['']
 
         return context
 

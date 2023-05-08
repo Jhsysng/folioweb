@@ -22,30 +22,31 @@
       </div>
     </div>
     <div class="card-body">
-        <h2 class="card-title">검색 목록</h2>
-        <h3>Language</h3>
         {% for lt in lang_tags %}
+            {% if forloop.first %}
+                <h3>Language</h3>
+            {% endif %}
             <span class="badge bg-light">
                 <img src="{{ lt.image.url }}" height="13" alt="{{ lt.name }} logo">{{ lt.name }}</span>
-        {% empty %}
-            <p>None</p>
         {% endfor %}
-        <h3>Tech</h3>
+        <br>
         {% for tt in tech_tags %}
+            {% if forloop.first %}
+                <h3>Tech</h3>
+            {% endif %}
             <span class="badge bg-light"><img src="{{ tt.image.url }}" height="13" alt="{{ tt.name }} logo">{{ tt.name }}</span>
-        {% empty %}
-            <p>None</p>
         {% endfor %}
-        <h3>Portfolio</h3>
+        <br>
         {% for p in portfolios %}
+            {% if forloop.first %}
+                <h3>Portfolio</h3>
+            {% endif %}
             <div class="card mb-4">
                 <div class="card-body">
-                    <a href="{{ p.get_url }}" style="text-decoration:none"><h2 class="card-title">[{{ p.pk }}]{{ p.title }}</h2></a>
+                    <a href="{{ p.get_absolute_url }}" style="text-decoration:none"><h2 class="card-title">[{{ p.pk }}]{{ p.title }}</h2></a>
                     <p class="card-text">{{ p.get_content|truncatewords_html:3|safe}}</p>
                 </div>
             </div>
-        {% empty %}
-            <p>None</p>
         {% endfor %}
     </div>
 {% endblock %}

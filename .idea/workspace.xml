@@ -2,15 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62dfcb05-8f7a-4469-b519-c7b5a8474aa1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/folio/search_base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/folio/tech_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolioblog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolioblog/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portfolioblog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolioblog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/folio/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/folio/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/folio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/folio/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/folio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/folio/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/templates/folio/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/folio/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/folio/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/folio/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/folio/portfolio.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/folio/portfolios.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/folio/portfolios.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/folio/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/folio/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/folio/tech_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/folio/tech_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -43,16 +53,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/alex/Library/CloudStorage/OneDrive-dongguk.edu/AssignmentProject/SideProject/Portfolioblog/folio/static/folio/bootstrap&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.django.DjangoModulesConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/alex/Library/CloudStorage/OneDrive-dongguk.edu/AssignmentProject/SideProject/Portfolioblog/folio/static/folio/bootstrap",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/folio/static/folio/bootstrap" />
@@ -107,7 +117,17 @@
       <workItem from="1680754649353" duration="2161000" />
       <workItem from="1680837908094" duration="4028000" />
       <workItem from="1681094598854" duration="27931000" />
-      <workItem from="1681368306640" duration="8986000" />
+      <workItem from="1681368306640" duration="10945000" />
+      <workItem from="1681568159661" duration="1199000" />
+      <workItem from="1681797697636" duration="580000" />
+      <workItem from="1682494174509" duration="2597000" />
+      <workItem from="1682912836684" duration="3307000" />
+      <workItem from="1683006839684" duration="599000" />
+      <workItem from="1683090929583" duration="13718000" />
+      <workItem from="1683123939264" duration="3256000" />
+      <workItem from="1683445481967" duration="1354000" />
+      <workItem from="1683528819186" duration="524000" />
+      <workItem from="1683529415132" duration="8792000" />
     </task>
     <servers />
   </component>

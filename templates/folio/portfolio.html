@@ -9,7 +9,7 @@
     <!-- portfolio data-->
     <div class="row">
         <div class="col-md-7">
-            <p class="card-text">Link : <a href="{{ portfolio.code_url }}">{{ portfolio.code_url }}</a></p>
+            <p class="card-img">Link : <a href="{{ portfolio.code_url }}">{{ portfolio.code_url }}</a></p>
             <p>Developer : {{ portfolio.user }}</p>
             <p>Duration : {{ portfolio.duration }}</p>
             <p>Language :
@@ -27,7 +27,7 @@
                 </span>
             {% endfor %}
             </p>
-            <p>Env : no service</p>
+            <!--<p>Env : no service</p>-->
         </div>
         <div class="col-md-5">
             <img class="card-img-top" src="{{ portfolio.image.url }}" alt="sample img">
@@ -35,18 +35,13 @@
     </div>
     <hr>
     <!-- content -->
-    <h3> 목표 </h3>
+    <!--<h3> 목표 </h3>
     <ul>
         <li>준비중</li>
-    </ul>
-    <hr>
-    <h3 class="mt-2">동기</h3>
-    <p>{{ portfolio.motive|linebreaksbr }}</p>
-    <hr>
+    </ul>-->
     <h3 class="mt-3">주요 기능 및 설명</h3>
     <p>{{ portfolio.get_content|safe }}</p>
     <hr>
     <!-- Updated date -->
-    <p>Version : {{ portfolio.version }}</p>
     <p>last edit date : {{ portfolio.updated_at|date:'Y-m-d H:i' }}</p>
 {% endblock %}

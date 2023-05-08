@@ -1,10 +1,12 @@
 {% extends 'folio/base.html' %}
 <h1>Portfolio List</h1>
 {% block main_area %}
+    <h2 class="mt-5">Portfolios</h2>
+    <hr>
     {% for p in portfolio_list %}
         <div class="card mb-4 my-3">
             <div class="card-body">
-                <a href="{{ p.get_absoulte_url }}" style="text-decoration:none"><h2 class="card-title">[{{ p.pk }}]{{ p.title }}</h2></a>
+                <a href="{{ p.get_absolute_url }}" style="text-decoration:none"><h2 class="card-title">[{{ p.pk }}]{{ p.title }}</h2></a>
                 {{ p.get_content|truncatewords_html:3|safe}}
                 <!-- tag -->
                 tag :

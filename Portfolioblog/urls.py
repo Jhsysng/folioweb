@@ -19,8 +19,11 @@ from django.conf.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
 
+import folio.views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('folio/',include('folio.urls')),
     path('markdownx/',include('markdownx.urls')),
+    path('',folio.views.HomeView.as_view(), name="about")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
