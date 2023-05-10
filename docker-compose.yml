@@ -1,24 +1,35 @@
 version: '3'
 
 services:
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_volume:/usr/src/static
+      - media_volume:/usr/src/media
+    ports:
+      - 80:80
+    depends_on:
+      - web
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: gunicorn Portfolioblog.wsgi:application --bind 0.0.0.0:8000
     volumes:
+      - static_volume:/usr/src/static
+      - static_volume:/usr/src/media
       - ./:/usr/src/app
-    ports:
-      - 8000:8000
+    expose:
+      - 8000
     env_file:
-      - ./.env.dev
+      - ./.env.prod
     depends_on:
       - db
   db:
     image: postgres:15-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    environment:
-      - POSTGRES_USER=alex
-      - POSTGRES_PASSWORD=ysng3012**
-      - POSTGRES_DB=Portfolio
+    env_file:
+      - ./.env.prod.db
 volumes:
   postgres_data:
+  static_volume:
+  media_volume:

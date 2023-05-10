@@ -23,7 +23,9 @@ import folio.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('folio/',include('folio.urls')),
-    path('markdownx/',include('markdownx.urls')),
-    path('',folio.views.HomeView.as_view(), name="about")
+    path('folio/', include('folio.urls')),
+    path('markdownx/', include('markdownx.urls')),
+    path('', folio.views.HomeView.as_view(), name="about")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
