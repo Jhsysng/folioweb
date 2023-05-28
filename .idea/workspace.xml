@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62dfcb05-8f7a-4469-b519-c7b5a8474aa1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/nginx/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx/nginx.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Portfolioblog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolioblog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Portfolioblog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Portfolioblog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +115,10 @@
       <workItem from="1683529415132" duration="11255000" />
       <workItem from="1683612244085" duration="430000" />
       <workItem from="1683613898591" duration="7879000" />
-      <workItem from="1683697139184" duration="611000" />
+      <workItem from="1683697139184" duration="4634000" />
+      <workItem from="1683996959639" duration="32000" />
+      <workItem from="1683999567333" duration="294000" />
+      <workItem from="1685257501546" duration="3389000" />
     </task>
     <servers />
   </component>
